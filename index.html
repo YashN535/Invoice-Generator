@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Generator - Create Professional Invoices Effortlessly</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="landing-container">
+      <header>
+        <h1>Invoice Generator</h1>
+        <p>
+          Create stunning, professional invoices in seconds. Streamline your
+          billing process and get paid faster.
+        </p>
+        <button id="getStarted" class="cta-button">Get Started</button>
+      </header>
+
+      <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-cards">
+          <div class="feature-card">
+            <div class="feature-icon">👩‍💼</div>
+            <h3>User-Friendly Interface</h3>
+            <p>
+              Intuitive design makes creating invoices a breeze, even for
+              beginners.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Professional Templates</h3>
+            <p>
+              Choose from a variety of sleek, customizable invoice templates.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌙</div>
+            <h3>Dark Mode</h3>
+            <p>Easy on the eyes with our customizable dark mode feature.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Custom Branding</h3>
+            <p>
+              Add your logo and colors for a personalized touch on every
+              invoice.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💻</div>
+            <h3>Cloud-Based</h3>
+            <p>
+              Access your invoices from anywhere, anytime. No software
+              installation required.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Secure & Private</h3>
+            <p>
+              Your data is encrypted and protected. We prioritize your privacy
+              and security.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-card">
+          <h3>Free Plan</h3>
+          <p>Basic features to get you started.</p>
+          <button class="cta-button">Sign Up</button>
+        </div>
+        <div class="pricing-card premium">
+          <h3>Premium Plan</h3>
+          <p>Access to advanced features, templates, and analytics.</p>
+          <p><strong>$9.99/month</strong></p>
+          <button class="cta-button">Upgrade</button>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 Invoice Generator. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <div class="form-container hidden">
+      <button id="backToLanding" class="back-button">
+        Back to Landing Page
+      </button>
+      <h1>Invoice Generator</h1>
+      <form id="invoiceForm">
+        <div class="form-group">
+          <label for="logoUpload">Upload Logo:</label>
+          <input type="file" id="logoUpload" accept="image/*" />
+        </div>
+
+        <h2>Business Details</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="businessName">Business Name:</label>
+            <input type="text" id="businessName" required />
+          </div>
+          <div class="form-group">
+            <label for="businessAddress">Business Address:</label>
+            <input type="text" id="businessAddress" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" required />
+          </div>
+          <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" required />
+          </div>
+          <div class="form-group">
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Telephone/Mobile Number:</label>
+            <input type="text" id="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+          </div>
+        </div>
+
+        <h2>Invoice Details</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientName">Client Name:</label>
+            <input type="text" id="clientName" required />
+          </div>
+          <div class="form-group">
+            <label for="invoiceNumber">Invoice Number:</label>
+            <input type="text" id="invoiceNumber" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="poNumber">PO Number:</label>
+            <input type="text" id="poNumber" />
+          </div>
+          <div class="form-group">
+            <label for="dateIssued">Date Issued:</label>
+            <input type="date" id="dateIssued" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="paymentTerms">Payment Terms:</label>
+            <input type="text" id="paymentTerms" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="items"
+            >Items (one per line, format: item,quantity,price):</label
+          >
+          <textarea id="items" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="cta-button">Generate Invoice</button>
+      </form>
+      <div id="invoice"></div>
+    </div>
+
+    <button id="darkModeToggle" class="dark-mode-toggle">🌓</button>
+    <script src="script.js"></script>
+  </body>
+</html>
